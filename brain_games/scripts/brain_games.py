@@ -1,8 +1,15 @@
-from brain_games import  cli
+# -*- coding:utf-8 -*-
+
+"""Script."""
+
+from brain_games import cli
+
 
 def main():
-    print("Welcome to the Brain Games!")
+    """Run script."""
+    print('Welcome to the Brain Games!')
     cli.welcome_user()
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     main()
