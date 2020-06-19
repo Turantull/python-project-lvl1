@@ -13,14 +13,15 @@ def welcome():
 
 def rules_of_game_even():
     """Rules of the game even."""
-    print('Answer "yes" if number even othewise answer "no".', end = '\n\n')
+    print('Answer "yes" if number even othewise answer "no".', end='\n\n')
 
 
 def welcome_user():
     """Acquaintance."""
     global name
     name = string('May I have your name? ')
-    print('Hello, {0}!'.format(name), end = '\n\n')
+    print('Hello, {0}!'.format(name), end='\n\n')
+
 
 def even(num):
     """Parity check."""
@@ -33,16 +34,16 @@ def even(num):
 def question():
     """Question to the user."""
     num = randint(1, 100)
-    global correct 
+    global correct
     correct = 'Correct!'
     print('Question: {0}'.format(num))
     answer = string('Your answer: ')
     even_num = even(num)
     if even_num and answer == 'yes':
         return correct
-    elif even_num == False and answer == 'no':
+    elif even_num is False and answer == 'no':
         return correct
-    elif even_num == False and answer == 'yes':
+    elif even_num is False and answer == 'yes':
         return "'yes' is wrong answer ;(. Correct answer was 'no'."
     elif even_num and answer == 'no':
         return "'no' is wrong answer ;(. Correct answer was 'yes'."
@@ -53,16 +54,13 @@ def question():
 def game():
     """Game."""
     rounds = 3
-    for i in range(rounds):
+    for step in range(rounds):
         result = question()
         if result == correct:
             print(correct)
         else:
-            if result != None:
+            if result is not None:
                 print(result)
-            print('Let\'s try again, {0}!'.format(name))
+            print("Let\'s try again, {0}!".format(name))
             return
-
-
     print('Congratulation, {0}!'.format(name))
-    
