@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 
-"""Script game brain-even."""
+"""Script game brain-calc."""
 
 from brain_games import cli
 
@@ -8,9 +8,9 @@ from brain_games import cli
 def main():
     """Run script."""
     cli.welcome()
-    cli.rules_of_game_even()
+    cli.rules_of_game_calc()
     name = cli.welcome_user()
-    cli.game(name=name)
+    cli.game_calc(name=name)
 
 
 if __name__ == '__main__':

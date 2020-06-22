@@ -2,7 +2,7 @@
 
 """Acquaintance with the user."""
 
-from prompt import string
+from prompt import string, integer
 from random import randint
 
 
@@ -16,11 +16,16 @@ def rules_of_game_even():
     print('Answer "yes" if number even othewise answer "no".', end='\n\n')
 
 
+def rules_of_game_calc():
+    """Rules of the game calc."""
+    print('What is the result of the expression?', end='\n\n')
+
+
 def welcome_user():
     """Acquaintance."""
-    global name
     name = string('May I have your name? ')
     print('Hello, {0}!'.format(name), end='\n\n')
+    return name
 
 
 def even(num):
@@ -51,7 +56,7 @@ def question():
         pass
 
 
-def game():
+def game(name):
     """Game."""
     rounds = 3
     for step in range(rounds):
@@ -64,3 +69,44 @@ def game():
             print("Let\'s try again, {0}!".format(name))
             return
     print('Congratulation, {0}!'.format(name))
+
+
+def answer_calc(num1, num2, operation):
+    if operation == 1:
+        answer = num1 + num2
+        operation_str = '+'
+        return answer, operation_str
+    elif operation == 2:
+        answer = num1 - num2
+        operation_str = '-'
+        return answer, operation_str
+    else:
+        answer = num1 * num2
+        operation_str = '*'
+        return answer, operation_str
+
+
+def question_calc():
+    """Question to the user in game calc."""
+    num1 = randint(1, 100)
+    num2 = randint(1, 100)
+    operation = randint(1, 3)
+    answer, operation_str = answer_calc(num1, num2, operation)
+    print('Question: {0} {1} {2}'.format(num1, operation_str, num2))
+    answer_user = integer('Your answer: ')
+    return answer, answer_user
+
+
+def game_calc(name):
+    """Game calc."""
+    rounds = 3
+    err = 'is wrong answer;(. Correct answer'
+    for step in range(rounds):
+        answer, answer_user = question_calc()
+        if answer == answer_user:
+            print('Correct!')
+        else:
+            print("'{0}' {2} '{1}'.".format(answer_user, answer, err))
+            print("Let\'s try again, {0}!".format(name))
+            return
+    print('Congratulation, {0}'.format(name))
