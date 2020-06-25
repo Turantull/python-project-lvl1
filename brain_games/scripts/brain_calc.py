@@ -7,8 +7,7 @@ from brain_games import cli
 
 def main():
     """Run script."""
-    cli.welcome()
-    cli.rules_of_game_calc()
+    cli.welcome_and_rules('What is the result of the expression?')
     name = cli.welcome_user()
     cli.game_calc(name=name)
 

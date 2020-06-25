@@ -6,19 +6,10 @@ from prompt import string, integer
 from random import randint
 
 
-def welcome():
-    """Welcome!."""
+def welcome_and_rules(rules):
+    """Welcome! And rules of the game."""
     print('Welcome to the Brain Games!')
-
-
-def rules_of_game_even():
-    """Rules of the game even."""
-    print('Answer "yes" if number even othewise answer "no".', end='\n\n')
-
-
-def rules_of_game_calc():
-    """Rules of the game calc."""
-    print('What is the result of the expression?', end='\n\n')
+    print(rules, end='\n\n')
 
 
 def welcome_user():

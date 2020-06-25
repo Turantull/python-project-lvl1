@@ -7,8 +7,7 @@ from brain_games import cli
 
 def main():
     """Run script."""
-    cli.welcome()
-    cli.rules_of_game_even()
+    cli.welcome_and_rules('Answer "yes" if number even otherwise answer "no".')
     name = cli.welcome_user()
     cli.game(name=name)
 
