@@ -6,6 +6,7 @@ from random import randint
 
 RULES = 'Find the greatest common divisor of given numbers.'
 
+
 def round():
     num1 = randint(0, 100)
     num2 = randint(0, 100)

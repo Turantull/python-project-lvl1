@@ -1,9 +1,8 @@
 # -*- coding:utf-8 -*-
 
-"""Acquaintance with the user."""
+from prompt import string
 
-from prompt import string, integer
-from random import randint
+"""Acquaintance with the user."""
 
 
 def welcome_and_rules(rules=None):
@@ -41,5 +40,5 @@ def grac(name):
 
 def wrong_answer(answer, answer_user):
     """Print wrong."""
-    print("'{0}' is wrond answer ;(. Correct answer was '{1}'."
-            .format(answer_user, answer))
+    err = 'is wrong answer ;(. Correct answer was'
+    print("'{0}' {2} '{1}'.".format(answer_user, answer, err))
