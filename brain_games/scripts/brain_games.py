@@ -7,7 +7,7 @@ from brain_games import cli
 
 def main():
     """Run script."""
-    cli.welcome()
+    cli.welcome_and_rules()
     cli.welcome_user()
 
 

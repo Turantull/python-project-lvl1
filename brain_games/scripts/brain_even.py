@@ -2,14 +2,13 @@
 
 """Script game brain-even."""
 
-from brain_games import cli
+from brain_games.engine import start
+from brain_games.games import even
 
 
 def main():
-    """Run script."""
-    cli.welcome_and_rules('Answer "yes" if number even otherwise answer "no".')
-    name = cli.welcome_user()
-    cli.game(name=name)
+    """Run brain-even game."""
+    start(even)
 
 
 if __name__ == '__main__':

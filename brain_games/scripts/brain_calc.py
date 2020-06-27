@@ -2,14 +2,13 @@
 
 """Script game brain-calc."""
 
-from brain_games import cli
+from brain_games.engine import start
+from brain_games.games import calc
 
 
 def main():
-    """Run script."""
-    cli.welcome_and_rules('What is the result of the expression?')
-    name = cli.welcome_user()
-    cli.game_calc(name=name)
+    """Run brain-calc game."""
+    start(calc)
 
 
 if __name__ == '__main__':
