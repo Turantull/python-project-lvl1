@@ -3,3 +3,4 @@
 [![Build Status](https://travis-ci.com/Turantull/python-project-lvl1.svg?branch=master)](https://travis-ci.com/Turantull/python-project-lvl1)
 [![asciicast](https://asciinema.org/a/QB6RSRUpHR9PqcJYMJH8UikD1.svg)](https://asciinema.org/a/QB6RSRUpHR9PqcJYMJH8UikD1)
 [![asciicast](https://asciinema.org/a/5UIRv4TrpTKgMZp7Vp4gb1ec2.svg)](https://asciinema.org/a/5UIRv4TrpTKgMZp7Vp4gb1ec2)
+[![asciicast](https://asciinema.org/a/iKIaqUFk8CcrQtg273agS3oCK.svg)](https://asciinema.org/a/iKIaqUFk8CcrQtg273agS3oCK)
