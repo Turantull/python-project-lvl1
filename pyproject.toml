@@ -1,10 +1,15 @@
 [tool.poetry]
 name = "Turantull_brain_games"
 version = "0.6.0"
-description = ""
+description = "Brain games project on hexlet"
 authors = ["Turantull"]
+repository = "https://github.com/Turantull/python-project-lvl1"
 packages = [
 	{ include = "brain_games" },
+]
+classifiers = [
+	"Topic :: Education"
+	"Environment :: Console"
 ]
 
 [tool.poetry.dependencies]
