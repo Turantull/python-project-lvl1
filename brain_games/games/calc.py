@@ -4,7 +4,7 @@
 
 from random import randint
 
-RULES = 'What is the result of the expression?'
+DESCRIPTION = 'What is the result of the expression?'
 
 
 def round():

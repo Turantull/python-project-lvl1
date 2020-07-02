@@ -4,7 +4,7 @@
 
 from random import randint
 
-RULES = 'Answer "yes" if number even otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
 def round():

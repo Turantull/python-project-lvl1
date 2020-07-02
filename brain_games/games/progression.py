@@ -4,7 +4,7 @@
 
 from random import randint
 
-RULES = "What number is missing in the progression?"
+DESCRIPTION = "What number is missing in the progression?"
 
 
 def round():
