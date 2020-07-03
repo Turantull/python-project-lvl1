@@ -7,7 +7,7 @@ from random import randint
 DESCRIPTION = "What number is missing in the progression?"
 
 
-def round():
+def start_the_round():
     length_progression = 10
     step = randint(1, 10)
     secret_elem = randint(0, 9)

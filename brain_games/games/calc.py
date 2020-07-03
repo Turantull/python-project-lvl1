@@ -7,7 +7,7 @@ from random import randint
 DESCRIPTION = 'What is the result of the expression?'
 
 
-def round():
+def start_the_round():
     num1 = randint(0, 100)
     num2 = randint(0, 100)
     operation = randint(1, 3)

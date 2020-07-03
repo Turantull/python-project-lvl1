@@ -7,7 +7,7 @@ from random import randint
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def round():
+def start_the_round():
     num = randint(0, 100)
     if is_prime(num):
         answer = 'yes'

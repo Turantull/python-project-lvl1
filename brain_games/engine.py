@@ -9,15 +9,20 @@ NUMBER_OF_ROUNDS = 3
 
 
 def start(game):
-    cli.welcome_and_rules(game.RULES)
+    print('Welcome to the Brain Games!')
+    if game.DESCRIPTION:
+        print(game.DESCRIPTION, end='\n\n')
+    else:
+        print(end='\n')
     name = cli.welcome_user()
     for _ in range(NUMBER_OF_ROUNDS):
-        str_question, answer = game.round()
+        str_question, answer = game.start_the_round()
         answer_user = cli.question(str_question)
         if answer == answer_user:
-            cli.correct()
+            print('Correct!')
         else:
-            cli.wrong_answer(answer, answer_user)
+            err = 'is wrong answer ;(. Correct answer was'
+            print("'{0}' {2} '{1}'.".format(answer_user, answer, err))
             break
     else:
-        cli.grac(name)
+        print('Congratulation, {0}!'.format(name))
