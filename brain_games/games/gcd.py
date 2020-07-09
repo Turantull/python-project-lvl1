@@ -14,8 +14,9 @@ def start_the_round():
     answer = gcd(question1, question2)
     return question_fo_user, str(answer)
 
+
 def gcd(question1, question2):
-    while question1 != 0 and question2 !=0:
+    while question1 != 0 and question2 != 0:
         if question1 > question2:
             question1 %= question2
         else:

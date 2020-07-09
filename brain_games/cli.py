@@ -17,4 +17,3 @@ def question(str_question):
     print('Question: {0}'.format(str_question))
     answer_user = string('Your answer: ')
     return answer_user
-
