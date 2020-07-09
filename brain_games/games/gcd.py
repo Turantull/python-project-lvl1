@@ -8,13 +8,16 @@ DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def start_the_round():
-    num1 = randint(0, 100)
-    num2 = randint(0, 100)
-    str_question = '{0} {1}'.format(num1, num2)
-    while num1 != 0 and num2 != 0:
-        if num1 > num2:
-            num1 %= num2
+    question1 = randint(0, 100)
+    question2 = randint(0, 100)
+    question_fo_user = '{0} {1}'.format(question1, question2)
+    answer = gcd(question1, question2)
+    return question_fo_user, str(answer)
+
+def gcd(question1, question2):
+    while question1 != 0 and question2 !=0:
+        if question1 > question2:
+            question1 %= question2
         else:
-            num2 %= num1
-    answer = num1 + num2
-    return str_question, str(answer)
+            question2 %= question1
+    return question1 + question2

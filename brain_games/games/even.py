@@ -8,9 +8,9 @@ DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
 def start_the_round():
-    num = randint(0, 100)
-    if num % 2 == 0:
+    question = randint(0, 100)
+    if question % 2 == 0:
         answer = 'yes'
     else:
         answer = 'no'
-    return num, answer
+    return question, answer

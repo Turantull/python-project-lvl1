@@ -16,5 +16,5 @@ def start_the_round():
     progressiya = list(range(start_num, finish, step))
     answer = progressiya[secret_elem]
     progressiya[secret_elem] = '..'
-    str_question = ' '.join(map(str, progressiya))
-    return str_question, str(answer)
+    question_fo_user = ' '.join(map(str, progressiya))
+    return question_fo_user, str(answer)
