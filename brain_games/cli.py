@@ -5,15 +5,15 @@ from prompt import string
 """Acquaintance with the user."""
 
 
-def welcome_user():
+def greet_player():
     """Acquaintance."""
     name = string('May I have your name? ')
     print('Hello, {0}!'.format(name), end='\n\n')
     return name
 
 
-def question(str_question):
+def ask_player(question):
     """Out question, in answer."""
-    print('Question: {0}'.format(str_question))
-    answer_user = string('Your answer: ')
-    return answer_user
+    print('Question: {0}'.format(question))
+    answer_player = string('Your answer: ')
+    return answer_player

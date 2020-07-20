@@ -14,15 +14,15 @@ def start(game):
         print(game.DESCRIPTION, end='\n\n')
     else:
         print(end='\n')
-    name = cli.welcome_user()
+    name = cli.greet_player()
     for _ in range(NUMBER_OF_ROUNDS):
-        str_question, answer = game.start_the_round()
-        answer_user = cli.question(str_question)
-        if answer == answer_user:
+        question, answer = game.question_creation()
+        answer_player = cli.ask_player(question)
+        if answer == answer_player:
             print('Correct!')
         else:
             err = 'is wrong answer ;(. Correct answer was'
-            print("'{0}' {2} '{1}'.".format(answer_user, answer, err))
+            print("'{0}' {2} '{1}'.".format(answer_player, answer, err))
             break
     else:
         print('Congratulation, {0}!'.format(name))

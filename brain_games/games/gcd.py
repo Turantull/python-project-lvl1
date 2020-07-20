@@ -7,12 +7,12 @@ from random import randint
 DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
-def start_the_round():
+def question_creation():
     question1 = randint(0, 100)
     question2 = randint(0, 100)
-    question_fo_user = '{0} {1}'.format(question1, question2)
+    question_fo_player = '{0} {1}'.format(question1, question2)
     answer = gcd(question1, question2)
-    return question_fo_user, str(answer)
+    return question_fo_player, str(answer)
 
 
 def gcd(question1, question2):

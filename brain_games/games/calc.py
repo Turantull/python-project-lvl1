@@ -8,7 +8,7 @@ import operator
 DESCRIPTION = 'What is the result of the expression?'
 
 
-def start_the_round():
+def question_creation():
     question1 = randint(0, 100)
     question2 = randint(0, 100)
     operations = [[operator.add, '+'],
@@ -16,5 +16,5 @@ def start_the_round():
                   [operator.mul, '*']]
     operation = choice(operations)
     answer = operation[0](question1, question2)
-    question_fo_user = '{0} {1} {2}'.format(question1, operation[1], question2)
-    return question_fo_user, str(answer)
+    question_fo_player = '{0} {1} {2}'.format(question1, operation[1], question2)
+    return question_fo_player, str(answer)
