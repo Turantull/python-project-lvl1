@@ -16,5 +16,5 @@ def question_creation():
     progression = list(range(start_num, finish, step))
     answer = progression[secret_elem]
     progression[secret_elem] = '..'
-    question_fo_player = ' '.join(map(str, progressiya))
+    question_fo_player = ' '.join(map(str, progression))
     return question_fo_player, str(answer)

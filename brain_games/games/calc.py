@@ -16,5 +16,6 @@ def question_creation():
                   [operator.mul, '*']]
     operation = choice(operations)
     answer = operation[0](random_number_1, random_number_2)
-    question_fo_player = '{0} {1} {2}'.format(random_number_1, operation[1], random_number_2)
+    question_fo_player = '{0} {1} {2}'.format(random_number_1,
+                                              operation[1], random_number_2)
     return question_fo_player, str(answer)

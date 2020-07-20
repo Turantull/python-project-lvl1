@@ -24,7 +24,8 @@ def start(game):
             print('Correct!')
         else:
             wrong_answer = 'is wrong answer ;(. Correct answer was'
-            print("'{0}' {2} '{1}'.".format(answer_player, answer, wrong_answer))
+            print("'{0}' {2} '{1}'.".format(answer_player,
+                                            answer, wrong_answer))
             print("Let's try again, {}!".format(name))
             break
     else:
