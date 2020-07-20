@@ -8,18 +8,18 @@ DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def question_creation():
-    question = randint(0, 100)
-    if is_prime(question):
+    random_number = randint(0, 100)
+    if is_prime(random_number):
         answer = 'yes'
     else:
         answer = 'no'
-    return question, answer
+    return random_number, answer
 
 
-def is_prime(question):
-    if question < 2:
+def is_prime(num):
+    if num < 2:
         return False
     pick = 2
-    while pick * pick <= question and question % pick != 0:
+    while pick * pick <= num and num % pick != 0:
         pick += 1
-    return pick * pick > question
+    return pick * pick > num

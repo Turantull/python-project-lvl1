@@ -8,17 +8,17 @@ DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def question_creation():
-    question1 = randint(0, 100)
-    question2 = randint(0, 100)
-    question_fo_player = '{0} {1}'.format(question1, question2)
-    answer = gcd(question1, question2)
+    random_number_1 = randint(0, 100)
+    random_number_2 = randint(0, 100)
+    question_fo_player = '{0} {1}'.format(random_number_1, random_number_2)
+    answer = gcd(random_number_1, random_number_2)
     return question_fo_player, str(answer)
 
 
-def gcd(question1, question2):
-    while question1 != 0 and question2 != 0:
-        if question1 > question2:
-            question1 %= question2
+def gcd(num_1, num_2):
+    while num_1 != 0 and num_2 != 0:
+        if num_1 > num_2:
+            num_1 %= num_2
         else:
-            question2 %= question1
-    return question1 + question2
+            num_2 %= num_1
+    return num_1 + num_2
