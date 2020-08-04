@@ -8,16 +8,12 @@ from brain_games import cli
 NUMBER_OF_ROUNDS = 3
 
 
-def start(game):
+def play(game):
     print('Welcome to the Brain Games!')
-    if game.DESCRIPTION:
-        print(game.DESCRIPTION, end='\n\n')
-    else:
-        print(end='\n')
     name = cli.ask_name_player()
     print('Hello, {0}!'.format(name), end='\n\n')
     for _ in range(NUMBER_OF_ROUNDS):
-        question, answer = game.question_creation()
+        question, answer = game.make_question_and_answer()
         print('Question: {0}'.format(question))
         answer_player = cli.ask_player_answer()
         if answer == answer_player:
