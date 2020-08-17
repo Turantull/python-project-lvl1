@@ -21,5 +21,7 @@ def is_prime(num):
         return False
     pick = 2
     while pick * pick <= num and num % pick != 0:
+        if num % pick == 0:
+            return True
         pick += 1
     return pick * pick > num
